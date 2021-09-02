@@ -7,15 +7,20 @@ public class EntregaCartaoMap {
     public static void main(String[] args) {
         Endereco endereco = new Endereco();
         endereco.cep = "54123221";
-        //dados doo endereco
+        //Dados doo endereco
+
         Cliente cliente = new Cliente();
-        //dados do cliente
+        cliente.nome = "Diego";
+        cliente.documento = "12345678999";
+        //Dados do cliente
 
         try {
         cliente.adicionaEndereco(endereco);
-        System.out.println("Endereço adicionado com sucesso!");
+
+        System.out.println("Endereço de " + cliente.getNome() +  " foi adicionado com sucesso!");
     }catch (Exception e){
             System.err.println("Erro "+ e);
         }
+
 }
 }

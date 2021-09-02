@@ -4,11 +4,9 @@ import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente {
+public class Cliente extends Pessoa{
 
-    public Integer codigo;
-    public String nome;
-    public String cpf;
+    public  String numCartao;
 
     private List<Endereco> enderecos;
 
@@ -16,10 +14,10 @@ public class Cliente {
 
     public void adicionaEndereco(Endereco endereco){
         if (endereco ==  null){
-            throw new NullPointerException("Endereco não pode ser nulo");
+            throw new NullPointerException("Endereco não pode ser nulo ou vazio.");
         }
         if (endereco.cep == null){
-            throw new NullPointerException("Cep não pode ser nulo");
+            throw new NullPointerException("Cep não pode ser nulo ou vazio.");
         }
         getEnderecos().add(endereco);
     }
