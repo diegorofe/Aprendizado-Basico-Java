@@ -2,6 +2,7 @@ package Ordenacao;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class OrdenacaoLista {
@@ -27,14 +28,24 @@ public class OrdenacaoLista {
 
         System.out.println("---------------");
 
-        System.out.println("--\tOrdem Natural\t--");
+//        System.out.println("--\tOrdem Natural\t--");
         Collections.sort(meusGatos);
-        System.out.println(meusGatos);
+        // System.out.println(meusGatos);
 
+//        System.out.println("--\tOrdem Idade\t--");
+        //Ordena por idade
+       //Collections.sort(meusGatos, new ComparatorIdade());
+       //outra forma de ordenar por idade
+//        meusGatos.sort(new ComparatorIdade());
+//        System.out.println(meusGatos);
+
+        System.out.println("--\tOrdem cor\t--");
+        meusGatos.sort(new ComparatorCor());
+        System.out.println(meusGatos);
     }
 }
 
-    class Gato implements Comparable<Gato>{
+    class Gato implements Comparable<Gato> {
         private String nome;
         private Integer idade;
         private String cor;
@@ -72,4 +83,40 @@ public class OrdenacaoLista {
 
         }
     }
+        class ComparatorIdade implements Comparator<Gato>{
+
+            @Override
+            public int compare(Gato g1, Gato g2) {
+                return Integer.compare(g1.getIdade(), g2.getIdade());
+            }
+        }
+
+        class ComparatorCor implements Comparator<Gato>{
+
+            @Override
+            public int compare(Gato g1, Gato g2) {
+               //se as cores forem iguais retorna zero
+                //se G1 > G2 retorna 1
+                //se G1<G2 retorna -1
+                return g1.getCor().compareToIgnoreCase(g2.getCor());
+            }
+        }
+
+        class ComparatorNomeCorIdade implements Comparator<Gato>{
+
+
+            @Override
+            public int compare(Gato g1, Gato g2) {
+               int nome = g1.getNome().compareToIgnoreCase(g2.getNome());
+               if(nome != 0) return nome;
+
+               int cor = g1.getCor().compareToIgnoreCase(g2.getCor());
+               if(cor != 0) return cor;
+
+               return Integer.compare(g1.getIdade(), g2.getIdade());
+
+            }
+        }
+
+
 
