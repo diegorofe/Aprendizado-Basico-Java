@@ -2,9 +2,12 @@ package colecoes;
 
 import java.util.*;
 
+
 public class ExemploList {
 
+
     public static void main(String[] args) {
+
 
 //        List notas = new ArrayList();
         //Diamond Operation. Não prcisa colocar o 2 Double
