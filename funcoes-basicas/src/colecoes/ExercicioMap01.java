@@ -1,6 +1,7 @@
 package colecoes;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ExercicioMap01 {
@@ -30,6 +31,15 @@ public class ExercicioMap01 {
 
         texto.tituloCentro("Imprima a população de pernambuco");
         System.out.println("Poupulação de pernambuco é: " + populacao.get("PE"));
+
+        texto.tituloCentro("Exiba todos os estados na ordem de inserção");
+        Map<String, Integer> populacao2 = new LinkedHashMap<>(){{
+            put("PE", 9616621);
+            put("AL", 3351543);
+            put("CE", 9187103);
+            put("RN", 3532265);
+        }};
+        System.out.println(populacao2.toString());
 
 
     }
