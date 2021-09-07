@@ -10,6 +10,8 @@ public class ExemploMap {
 
         ImprimirTexto texto = new ImprimirTexto();
 
+
+texto.tituloCentro(("Crie um dicionario de estados e sua respectiva população"));
         Map<String, Double> carrosPopulares = new HashMap<>() {{
             put("gol", 14.4);
             put("uno", 15.6);
@@ -17,6 +19,8 @@ public class ExemploMap {
             put("hb20", 14.5);
             put("kwid", 15.6);
         }};
+
+
 
         //    System.out.println(carrosPopulares.toString());
 
