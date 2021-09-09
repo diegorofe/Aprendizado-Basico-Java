@@ -44,6 +44,16 @@ public class OrdenacaoMap {
            System.out.println(livro.getKey() + " - " + livro.getValue().getNome());
        }
 
+  /*      texto.tituloCentro("Ordem alfabetica das páginas");
+        Set<Map.Entry<String, Livro>> meusLivros4 = new TreeSet<>(new Comparator<Map.Entry<String, Livro>>() {
+            @Override
+            public int compare(Map.Entry<String, Livro> cont1, Map.Entry<String, Livro> cont2) {
+                return Integer.compare(cont1.getValue().getPaginas(), cont2.getValue().getPaginas());
+            }
+
+        });*/
+
+
     }
 
 }

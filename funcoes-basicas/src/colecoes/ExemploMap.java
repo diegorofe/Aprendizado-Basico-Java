@@ -11,7 +11,7 @@ public class ExemploMap {
         ImprimirTexto texto = new ImprimirTexto();
 
 
-texto.tituloCentro(("Crie um dicionario de estados e sua respectiva população"));
+texto.tituloCentro(("Crie um dicionario de carros e consumo"));
         Map<String, Double> carrosPopulares = new HashMap<>() {{
             put("gol", 14.4);
             put("uno", 15.6);
