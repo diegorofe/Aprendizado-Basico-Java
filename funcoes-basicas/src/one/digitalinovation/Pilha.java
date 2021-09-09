@@ -15,13 +15,13 @@ public class Pilha {
     public void push(No novoNo) {
         No refAuxiliar = refNoEntradaPilha;
         refNoEntradaPilha = novoNo;
-        refNoEntradaPilha.setReNo(refAuxiliar);
+        refNoEntradaPilha.setRefNo(refAuxiliar);
     }
 
     public No pop() {
         if (!this.isEmpty()) {
             No noPop = refNoEntradaPilha;
-            refNoEntradaPilha = refNoEntradaPilha.getReNo();
+            refNoEntradaPilha = refNoEntradaPilha.getRefNo();
             return noPop;
         }
         return null;
@@ -45,7 +45,7 @@ public class Pilha {
         while (true) {
             if (noAuxiliar != null) {
                 stringRetorno += "[No{dado" + noAuxiliar.getDado() + "}]\n";
-                noAuxiliar = noAuxiliar.getReNo();
+                noAuxiliar = noAuxiliar.getRefNo();
             } else {
                 break;
             }
