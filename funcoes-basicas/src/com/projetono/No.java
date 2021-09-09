@@ -1,20 +1,20 @@
 package com.projetono;
+//generics
+public class No<T> {
 
-public class No {
+private T conteudo;
+private No<T> proximNo;
 
-private String conteudo;
-private No proximNo;
-
-    public No(String conteudo) {
+    public No(T conteudo) {
         this.proximNo = null;
         this.conteudo = conteudo;
     }
 
-    public String getConteudo() {
+    public T getConteudo() {
         return conteudo;
     }
 
-    public void setConteudo(String conteudo) {
+    public void setConteudo(T conteudo) {
         this.conteudo = conteudo;
     }
 
@@ -22,7 +22,7 @@ private No proximNo;
         return proximNo;
     }
 
-    public void setProximNo(No proximNo) {
+    public void setProximNo(No<T> proximNo) {
         this.proximNo = proximNo;
     }
 
