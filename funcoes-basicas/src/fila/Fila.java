@@ -47,7 +47,7 @@ public class Fila {
         return null;
     }
 
-    public Fila(No refNoEntradaFila) {
+    public Fila() {
         this.refNoEntradaFila = null;
     }
 
